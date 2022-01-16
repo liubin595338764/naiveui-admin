@@ -5,7 +5,9 @@
 </template>
 
 <script setup>
-
+function add(){
+    console.log('add');
+}
 </script>
 
 <style lang="scss" scoped>
