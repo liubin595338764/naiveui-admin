@@ -20,6 +20,8 @@ import naiveMessage from './components/naiveMessage.vue'
 </template>
 
 <style>
+@import '@/sass/global.scss';
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
