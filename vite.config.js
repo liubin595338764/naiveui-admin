@@ -1,4 +1,5 @@
-import { defineConfig } from 'vite'
+import { defineConfig, UserConfigExport, ConfigEnv } from 'vite'
+import { viteMockServe } from 'vite-plugin-mock'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
@@ -12,5 +13,18 @@ export default defineConfig({
             'components': path.resolve(__dirname, 'src/components')
         }
     },
-    plugins: [vue()],
+    plugins: [
+        vue(),
+        viteMockServe({
+            // default
+            mockPath: '/mock',
+            localEnabled: true,
+            prodEnabled: true,
+            //  这样可以控制关闭mock的时候不让mock打包到最终代码内
+            injectCode: `
+                import { setupProdMockServer } from '../mock/mockProdServer';
+                setupProdMockServer();
+            `,
+        }),
+    ],
 })

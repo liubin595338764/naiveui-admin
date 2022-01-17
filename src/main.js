@@ -1,4 +1,3 @@
-
 import { createApp } from 'vue'
 import App from './App.vue'
 import useNaiveUI from './plugins/useNaiveUI';
@@ -16,6 +15,7 @@ setTimeout(() => {
     window.$message.info('router.isReady')
 }, 100);
 // 调试
+console.log(import.meta.env);
 if (import.meta.env.DEV) {
     window.app = app
     window.store = store

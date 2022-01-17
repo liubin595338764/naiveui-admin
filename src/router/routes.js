@@ -1,6 +1,6 @@
 
 const routes = [
-    { path: '/', redirect: '/dashboard' },
+    { path: '/', redirect: '/login' },
     {
         path: '/dashboard',
         component: () => import('../views/dashboard/dashboard.vue')
@@ -8,6 +8,10 @@ const routes = [
     {
         path: '/aaa',
         component: () => import('../views/aaa/aaa.vue')
+    },
+    {
+        path: '/login',
+        component: () => import('../views/login/login.vue')
     },
 ]
 
