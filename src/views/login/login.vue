@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="loginPage">
         <p>登录</p>
         <div class="btn">
             <button @click="loginHandler">
@@ -21,6 +21,11 @@ const loginHandler = ()=>{
 </script>
 
 <style lang="scss" scoped>
+.loginPage {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
 .btn {
     margin-top: 100px;
 }
