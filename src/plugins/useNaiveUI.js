@@ -1,7 +1,15 @@
-import { create, NButton, NMessageProvider } from "naive-ui";
+import { 
+    create, 
+    NElement, 
+    NEl, 
+    NButton, 
+    NMessageProvider,
+} from "naive-ui";
 
 const naive = create({
     components:[
+        NElement,
+        NEl,
         NButton,
         NMessageProvider,
     ]
