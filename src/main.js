@@ -12,7 +12,7 @@ router.isReady().then(() => {
 })
 
 setTimeout(() => {
-    window.$message.info('router.isReady')
+    window.$message?.info('router.isReady')
 }, 100);
 // 调试
 console.log(import.meta.env);
