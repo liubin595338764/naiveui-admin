@@ -2,6 +2,9 @@
     <div class="loginPage">
         <leftVue class="left-image" />
         <rightVue class="right-image" />
+        <div class="loginContainer">
+            <loginMain />
+        </div>
         <p>登录</p>
         <div class="btn">
             <button @click="loginHandler">
@@ -15,6 +18,7 @@
 import leftVue from './components/left.vue';
 import rightVue from './components/right.vue';
 import {login} from '@/api/user.js';
+import loginMain from './components/index.vue';
 const loginHandler = ()=>{
     login().then(res=>{
         console.log(res);
