@@ -1,6 +1,8 @@
 <template>
     <div class="loginContainer">
-        <h3>系统登录</h3>
+        <h3 class="title">
+            系统登录
+        </h3>
         <div class="inputBar">
             <n-input v-model:value="value" type="text" placeholder="基本的 Input" />
         </div>
@@ -21,5 +23,11 @@ const loginHandler = ()=>{
 <style lang="scss" scoped>
 .loginContainer {
     width: 520px;
+    padding: 20px;
+    .title {
+        text-align: center;
+        padding: 30px 0;
+        font-size: 16px;
+    }
 }
 </style>

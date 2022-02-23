@@ -17,15 +17,9 @@
 <script setup>
 import leftVue from './components/left.vue';
 import rightVue from './components/right.vue';
-import {login} from '@/api/user.js';
+
 import loginMain from './components/index.vue';
-const loginHandler = ()=>{
-    login().then(res=>{
-        console.log(res);
-    }).catch(err=>{
-        console.log(err);
-    })
-}
+
 </script>
 
 <style lang="scss" scoped>
@@ -33,6 +27,17 @@ const loginHandler = ()=>{
     position: relative;
     height: 100%;
     width: 100%;
+
+    .loginContainer {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        width: 520px;
+        border-radius: 5px;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    }
 }
 .btn {
     margin-top: 100px;
